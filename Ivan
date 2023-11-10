@@ -9,3 +9,14 @@ while var_1 > 0:
 print("Число в обратном порядке:", reverse)
 # Вывод:
 Число в обратном порядке: 7651
+apiVersion: serving.knative.dev/v1
+kind: Service
+...
+spec:
+  template:
+    spec:
+      containers:
+      - image: IMAGE_URL
+        ports:
+        - name: h2c
+          containerPort: 8080
